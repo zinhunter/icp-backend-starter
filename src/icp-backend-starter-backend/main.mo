@@ -7,14 +7,15 @@ import Text "mo:base/Text";
 
 actor {
   public query func practica() : async Text {
+
     let numero_natural : Nat = 133;
     let numero_natural_8_bits : Nat8 = 8;
     let numero_natural_16_bits : Nat16 = 155;
     let numero_natural_32_bits : Nat32 = 10;
     let numero_natural_64_bits : Nat64 = 1;
 
-    let texto : Text = "Hola mundo!";
+    let saludo : Text = "Hola mundo!";
 
-    return texto;
+    return saludo;
   };
 };
