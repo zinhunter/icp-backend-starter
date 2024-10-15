@@ -6,8 +6,17 @@ import Nat64 "mo:base/Nat64";
 import Text "mo:base/Text";
 
 actor {
-  public query func practica() : async Text {
+  stable var contador : Nat8 = 0;
 
+  public func aumentarContador() {
+    contador += 1;
+  };
+
+  public query func obtenerContador() : async Nat8 {
+    return contador;
+  };
+
+  public query func practica() : async Text {
     let numero_natural : Nat = 133;
     let numero_natural_8_bits : Nat8 = 8;
     let numero_natural_16_bits : Nat16 = 155;
