@@ -6,6 +6,7 @@ import Nat64 "mo:base/Nat64";
 import Text "mo:base/Text";
 
 actor {
+  // Practica 2
   stable var contador : Nat8 = 0;
 
   public func aumentarContador() {
