@@ -17,6 +17,16 @@ actor {
     return contador;
   };
 
+  // Practica 3
+  public query func arreglos() : async Nat {
+    // En C++ se declara asi:
+    //int nums[3] = {10, 20, 30};
+
+    let nums : [Nat] = [10, 20, 30];
+
+    return nums[1];
+  };
+
   public query func practica() : async Text {
     let numero_natural : Nat = 133;
     let numero_natural_8_bits : Nat8 = 8;
