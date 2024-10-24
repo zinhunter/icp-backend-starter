@@ -9,6 +9,20 @@ actor {
   // Practica 2
   stable var contador : Nat8 = 0;
 
+  type Nombre = Text;
+
+  type Perro = {
+    raza: Text;
+    nombre: Nombre;
+    edad: Nat8;
+  };
+
+  public query func crearPerrito(raza: Text, name: Nombre, edad: Nat8) : async Perro {
+    let perrito = { raza = raza; nombre = name; edad = edad};
+
+    return perrito;
+  };
+
   public func aumentarContador() {
     contador += 1;
   };
