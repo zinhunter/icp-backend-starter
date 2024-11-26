@@ -2,7 +2,6 @@
 // País:
 // Expriencia: 
 actor Nombre {
-  // Comentario
   var nombre: Text = "";
 
   public query func obtenerNombre(): async Text {
