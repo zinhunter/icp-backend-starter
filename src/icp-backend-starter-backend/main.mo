@@ -43,36 +43,8 @@ actor Crud {
     return segundoPaso;
   };
 
-  public func actualizarRegistro(nombre: Nombre): async Bool {
-    let perrito: ?Perro = perritos.get(nombre);
-    switch(perrito) {
-      case (null) {
-        Debug.print("No se encontró el registro solicitado.");
-        false
-      };
-      case (?perritoOk) {
-        let nuevoPerrito = {nombre; raza = perritoOk.raza; edad= perritoOk.edad; adoptado= true; color= perritoOk.color};
-        perritos.put(nombre, nuevoPerrito);
-        true
-      };
-    };
-  };
-
-  public func borrarRegistro(nombre: Nombre): async Bool {
-    let perrito: ?Perro = perritos.get(nombre);
-
-    switch(perrito){
-      case (null) {
-        Debug.print("No se encontró ese perrito en los registros.");
-        false
-      };
-      case (_) {
-        ignore perritos.remove(nombre);
-        Debug.print("Perrito borrado correctamente.");
-        true
-      };
-    };
+  public func guardarNombre(name: Text) {
+    nombre := name;
   };
 };
-
 
